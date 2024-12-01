@@ -23,7 +23,7 @@ public class SecurityInDataBaseApplication {
 	}
 
 	@Bean
-	CommandLineRunner init(UserRepository userRepository, PermissionRepository permissionRepository, RolRepository rolRepository) {
+	CommandLineRunner init(UserRepository userRepository) {
 		return args -> {
 			// Crear permisos
 			PermissionEntity createPermission = PermissionEntity
@@ -52,7 +52,7 @@ public class SecurityInDataBaseApplication {
 					.build();
 
 			// Guardar permisos en la base de datos
-			permissionRepository.saveAll(List.of(createPermission, readPermission, updatePermission, deletePermission, deployPermission));
+//			permissionRepository.saveAll(List.of(createPermission, readPermission, updatePermission, deletePermission, deployPermission));
 
 
 			// Crear roles
@@ -81,7 +81,7 @@ public class SecurityInDataBaseApplication {
 					.build();
 
 			// Guardar roles en la base de datos
-			rolRepository.saveAll(List.of(adminRol, guestRol, userRol, developerRol));
+//			rolRepository.saveAll(List.of(adminRol, guestRol, userRol, developerRol));
 
 
 			// Crear usuarios

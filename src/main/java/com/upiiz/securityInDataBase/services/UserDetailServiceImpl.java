@@ -26,9 +26,10 @@ public class UserDetailServiceImpl implements UserDetailsService {
 
         // En userEnitiy = sus roles, permisos, etc.
         List<SimpleGrantedAuthority> authorities = new ArrayList<>();
+
         // Iteramos sobre los roles del usuario
         userEntity.getRoles().forEach(rol -> {
-            authorities.add(new SimpleGrantedAuthority("ROLE_".concat(rol.getRolEnum().name())));
+            authorities.add(new SimpleGrantedAuthority("ROLE_" + rol.getRolEnum().name()));
         });
 
         // Permisos

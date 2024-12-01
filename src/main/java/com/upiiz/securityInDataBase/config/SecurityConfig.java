@@ -27,8 +27,10 @@ public class SecurityConfig {
     private AuthenticationConfiguration authenticationConfiguration;
 
     @Bean
-    public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity, UserDetailServiceImpl userDetailServiceImpl) throws Exception {
+    public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
         return httpSecurity
+                .csrf(csrf -> csrf
+                        .ignoringRequestMatchers("/api/v1/facturas/**"))
                 .httpBasic(Customizer.withDefaults())
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(http -> {
