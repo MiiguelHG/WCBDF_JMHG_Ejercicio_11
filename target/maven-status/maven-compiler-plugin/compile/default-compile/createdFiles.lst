@@ -1,0 +1,14 @@
+com\upiiz\securityInDataBase\repositories\RolRepository.class
+com\upiiz\securityInDataBase\repositories\PermissionRepository.class
+com\upiiz\securityInDataBase\SecurityInDataBaseApplication.class
+com\upiiz\securityInDataBase\repositories\UserRepository.class
+com\upiiz\securityInDataBase\controllers\FacturasController.class
+com\upiiz\securityInDataBase\entities\UserEntity.class
+com\upiiz\securityInDataBase\entities\PermissionEntity.class
+com\upiiz\securityInDataBase\entities\RolEntity$RolEntityBuilder.class
+com\upiiz\securityInDataBase\entities\PermissionEntity$PermissionEntityBuilder.class
+com\upiiz\securityInDataBase\config\SecurityConfig.class
+com\upiiz\securityInDataBase\entities\RolEntity.class
+com\upiiz\securityInDataBase\services\UserDetailServiceImpl.class
+com\upiiz\securityInDataBase\entities\UserEntity$UserEntityBuilder.class
+com\upiiz\securityInDataBase\entities\RolEnum.class
